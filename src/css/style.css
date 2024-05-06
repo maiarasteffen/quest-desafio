@@ -1,0 +1,149 @@
+body {
+    min-height: 100vh;
+    background: url('../images/bg-desktop.svg');
+    background-color: var(--violet-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: var(--font-body);
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 50px 0 50px ;
+}
+
+.logo img {
+    max-width:220px;
+    max-height:150px;
+}
+
+.section {
+    display: flex;
+}
+
+.section .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.section .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.section .info h3 {
+    font-size: 4rem;
+    font-weight: 600;
+    max-width: 560px;
+    font-family: var(--font-headings);
+    margin-top: 20%;
+}
+
+.section .info p {
+    font-size: 1.8rem;
+    max-width: 520px;
+    line-height: 25px;
+    margin: 25px 0;
+}
+
+.section .info button {
+    background-color: #fff;
+    border: none;
+    padding: 15px 65px;
+    border-radius: 50px;
+    font-size: 1.8rem;
+    font-family: var(--font-headings);
+    color: var(--violet-color);
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.section .info button:hover {
+    background-color: var(--soft-magenta-color);
+    color: #fff;
+    box-shadow: 5px 5px 15px 5px rgba(3, 3, 3, 0.2);
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.social span {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    margin: 0 10px;
+    place-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.social span:hover {
+    color: var(--soft-magenta-color);
+    border-color: var(--soft-magenta-color);
+}
+
+.social span i {
+    font-size: 15px;
+}
+
+@media (max-width: 375px) {
+    body {
+        background: url('../images/bg-desktop.svg');
+        background-color: var(--violet-color);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .section {
+        flex-direction: column;
+        height:80%;
+        width: 375px;
+    }
+
+    .section .image {
+        margin: 20px;
+    }
+
+    .section .image img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .section .info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .section .info h3 {
+        font-size: 2.5rem;
+        margin: auto;
+    }
+
+    .section .info p {
+        font-size: 1.5rem;
+        width: 300px;
+    }
+
+    .social {
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    
+}
