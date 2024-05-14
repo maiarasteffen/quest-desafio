@@ -1,5 +1,5 @@
 body {
-    min-height: 100vh;
+    max-width: 1440px;
     background: url('../images/bg-desktop.svg');
     background-color: var(--violet-color);
     background-position: center;
@@ -10,33 +10,34 @@ body {
 }
 
 .logo {
-    display: flex;
     align-items: center;
-    padding: 0 50px 0 50px ;
 }
 
 .logo img {
-    max-width:220px;
-    max-height:150px;
+    margin: auto 50px;
+    width:220px;
+    height:150px;
 }
 
 .section {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .section .image {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 50px;
+    justify-content: center;
+    text-align: center;
+    padding: 0 50px;
 }
 
 .section .info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    height: 100%;
     width: 100%;
 }
 
@@ -45,7 +46,6 @@ body {
     font-weight: 600;
     max-width: 560px;
     font-family: var(--font-headings);
-    margin-top: 20%;
 }
 
 .section .info p {
@@ -75,13 +75,19 @@ body {
 }
 
 .social {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 15px;
 }
 
-.social span {
+.social ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.social ul li {
     width: 40px;
     height: 40px;
     display: grid;
@@ -92,13 +98,15 @@ body {
     cursor: pointer;
 }
 
-.social span:hover {
+.social li:hover,
+.social li a:hover {
     color: var(--soft-magenta-color);
     border-color: var(--soft-magenta-color);
 }
 
-.social span i {
+.social li a {
     font-size: 15px;
+    color: #fff;
 }
 
 @media (max-width: 375px) {
@@ -113,11 +121,11 @@ body {
     .section {
         flex-direction: column;
         height:80%;
-        width: 375px;
+        width: 100%;
     }
 
     .section .image {
-        margin: 20px;
+        margin: 0;
     }
 
     .section .image img {
